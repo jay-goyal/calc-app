@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Spartan", sans-serif;
+  font-size: 32px;
+  background: hsl(222, 26%, 31%);
+  box-sizing: border-box;
+}
+
+/* TOP TEXT */
+#text_title {
+  width: 15.78rem;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 1rem;
+  color: rgb(255, 255, 255);
+}
+
+/* INPUT FIELD */
+#text {
+  background: hsl(224, 36%, 15%);
+  margin: auto;
+  padding: 0.3rem 1rem;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: right;
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  width: 15.78rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+/* KEYPAD */
+#btn_parent {
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 0.9rem;
+  grid-auto-rows: minmax(2rem, min-content);
+  grid-auto-columns: minmax(3rem, min-content);
+  align-items: center;
+  background: hsl(223, 31%, 20%);
+  width: 15.78rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.btn {
+  text-align: center;
+  line-height: 2rem;
+  background: hsl(30, 25%, 89%);
+  border-radius: 8px;
+  box-shadow: 0px 8px hsl(28, 16%, 65%);
+  color: hsl(221, 14%, 31%);
+  cursor: pointer;
+}
+
+.btn_blue {
+  background: hsl(225, 21%, 49%);
+  box-shadow: 0px 8px hsl(224, 28%, 35%);
+  color: rgb(255, 255, 255);
+}
+
+.btn_red {
+  background: hsl(6, 63%, 50%);
+  box-shadow: 0px 8px hsl(6, 70%, 34%);
+  color: rgb(255, 255, 255);
+}
+
+.btn_big {
+  grid-column: span 2;
+}
