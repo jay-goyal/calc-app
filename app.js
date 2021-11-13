@@ -44,7 +44,6 @@ if (!checkbox.checked) {
 } else {
   body.className = "theme_light";
 }
-localStorage.setItem("theme", checkbox.checked);
 
 toggle.addEventListener("click", function () {
   checkbox.checked = !checkbox.checked;
