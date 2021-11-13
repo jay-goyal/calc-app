@@ -33,7 +33,13 @@ btn_eq.addEventListener("click", function () {
 // THEME
 var checkbox = document.querySelector('input[type="checkbox"]');
 var toggle = document.getElementById("switch");
-var body = document.querySelector('body')
+var body = document.querySelector("body");
+
+if (!checkbox.checked) {
+  body.className = "theme_dark";
+} else {
+  body.className = "theme_light";
+}
 
 toggle.addEventListener("click", function () {
   checkbox.checked = !checkbox.checked;
