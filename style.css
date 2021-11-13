@@ -107,10 +107,17 @@ input:checked + #slider:before {
   height: 3rem;
   line-height: 3rem;
   text-align: right;
-  color: var(--text-primary);
   font-size: 1rem;
   width: 15.78rem;
   border-radius: 8px;
+}
+
+.theme_dark #text {
+  color: var(--text-primary);
+}
+
+.theme_light #text {
+	color: var(--text-btn-norm);
 }
 
 /* KEYPAD */
