@@ -35,11 +35,16 @@ var checkbox = document.querySelector('input[type="checkbox"]');
 var toggle = document.getElementById("switch");
 var body = document.querySelector("body");
 
+if (localStorage.getItem("theme") === null) {
+  checkbox.checked = localStorage.getItem("theme");
+}
+
 if (!checkbox.checked) {
   body.className = "theme_dark";
 } else {
   body.className = "theme_light";
 }
+localStorage.setItem("theme", checkbox.checked);
 
 toggle.addEventListener("click", function () {
   checkbox.checked = !checkbox.checked;
@@ -48,4 +53,5 @@ toggle.addEventListener("click", function () {
   } else {
     body.className = "theme_light";
   }
+  localStorage.setItem("theme", checkbox.checked);
 });
