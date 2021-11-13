@@ -1,12 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
 
+/* THEME */
+.theme_dark {
+  --main-bg: hsl(222, 26%, 31%);
+  --sec-bg: hsl(223, 31%, 20%);
+  --bg-calc-text: hsl(224, 36%, 15%);
+  --btn-norm-bg: hsl(30, 25%, 89%);
+  --btn-norm-shadow: hsl(28, 16%, 65%);
+  --btn-blue-bg: hsl(225, 21%, 49%);
+  --btn-blue-shadow: hsl(224, 28%, 35%);
+  --btn-red-bg: hsl(6, 63%, 50%);
+  --btn-red-shadow: hsl(6, 70%, 34%);
+  --text-primary: hsl(0, 0%, 100%);
+  --text-btn-norm: hsl(221, 14%, 31%);
+}
+
+.theme_light {
+  --main-bg: hsl(0, 0%, 90%);
+  --sec-bg: hsl(0, 5%, 81%);
+  --bg-calc-text: hsl(0, 0%, 93%);
+  --btn-norm-bg: hsl(45, 7%, 89%);
+  --btn-norm-shadow: hsl(35, 11%, 61%);
+  --btn-blue-bg: hsl(185, 42%, 37%);
+  --btn-blue-shadow: hsl(185, 58%, 25%);
+  --btn-red-bg: hsl(25, 98%, 40%);
+  --btn-red-shadow: hsl(25, 99%, 27%);
+  --text-primary: hsl(0, 0%, 100%);
+  --text-btn-norm: hsl(60, 10%, 19%);
+}
+
 * {
   margin: 0;
   padding: 0;
   font-family: "Spartan", sans-serif;
   font-size: 32px;
-  background: hsl(222, 26%, 31%);
+  background: var(--main-bg);
   box-sizing: border-box;
+  transition: 0.5s ease-in-out;
 }
 
 /* TOP TEXT */
@@ -14,22 +44,72 @@
   width: 15.78rem;
   margin: auto;
   margin-top: 5%;
-  margin-bottom: 1rem;
-  color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+}
+
+.theme_dark #text_title {
+  color: var(--text-primary);
+}
+.theme_light #text_title {
+  color: var(--text-btn-norm);
+}
+
+/* Toggle */
+#theme_toggle {
+  font-size: 16px;
+}
+
+#switch {
+  position: relative;
+  display: inline-block;
+  width: 2.3rem;
+  height: 0.75rem;
+}
+
+#slider {
+  position: absolute;
+  cursor: pointer;
+  border-radius: 0.375rem;
+  top: 5px;
+  left: 0;
+  bottom: -5px;
+  right: 0;
+  background: var(--sec-bg);
+}
+
+#switch input {
+  display: none;
+}
+
+#slider:before {
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--btn-red-bg);
+  transition: 0.5s ease-in-out;
+}
+
+input:checked + #slider:before {
+  transform: translateX(49px);
 }
 
 /* INPUT FIELD */
 #text {
-  background: hsl(224, 36%, 15%);
+  background: var(--bg-calc-text);
   margin: auto;
+  margin-bottom: 1rem;
   padding: 0.2rem 1rem;
   height: 3rem;
   line-height: 3rem;
   text-align: right;
-  color: rgb(255, 255, 255);
+  color: var(--text-primary);
   font-size: 1rem;
   width: 15.78rem;
-  margin-bottom: 1rem;
   border-radius: 8px;
 }
 
@@ -43,19 +123,20 @@
   grid-auto-rows: minmax(2rem, min-content);
   grid-auto-columns: minmax(3rem, min-content);
   align-items: center;
-  background: hsl(223, 31%, 20%);
+  background: var(--sec-bg);
   width: 15.78rem;
   padding: 1rem;
   border-radius: 8px;
 }
 
+/* Standard Buttons */
 .btn {
   text-align: center;
   line-height: 2rem;
-  background: hsl(30, 25%, 89%);
+  background: var(--btn-norm-bg);
   border-radius: 8px;
-  box-shadow: 0px 8px hsl(28, 16%, 65%);
-  color: hsl(221, 14%, 31%);
+  box-shadow: 0px 8px var(--btn-norm-shadow);
+  color: var(--text-btn-norm);
   cursor: pointer;
   transition: 0.1s ease-in;
 }
@@ -65,18 +146,21 @@
   box-shadow: none;
 }
 
+/* Blue Buttons */
 .btn_blue {
-  background: hsl(225, 21%, 49%);
-  box-shadow: 0px 8px hsl(224, 28%, 35%);
-  color: rgb(255, 255, 255);
+  background: var(--btn-blue-bg);
+  box-shadow: 0px 8px var(--btn-blue-shadow);
+  color: var(--text-primary);
 }
 
+/* Red Buttons */
 .btn_red {
-  background: hsl(6, 63%, 50%);
-  box-shadow: 0px 8px hsl(6, 70%, 34%);
-  color: rgb(255, 255, 255);
+  background: var(--btn-red-bg);
+  box-shadow: 0px 8px var(--btn-red-shadow);
+  color: var(--text-primary);
 }
 
+/* Big Buttons */
 .btn_big {
   grid-column: span 2;
 }

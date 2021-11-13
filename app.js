@@ -1,3 +1,4 @@
+// CALCULATOR CODE
 let div = document.getElementById("text");
 let value = div.innerHTML;
 
@@ -27,4 +28,18 @@ btn_eq.addEventListener("click", function () {
   value = value.replace("x", "*");
   value = eval(value);
   div.innerHTML = value;
+});
+
+// THEME
+var checkbox = document.querySelector('input[type="checkbox"]');
+var toggle = document.getElementById("switch");
+var body = document.querySelector('body')
+
+toggle.addEventListener("click", function () {
+  checkbox.checked = !checkbox.checked;
+  if (!checkbox.checked) {
+    body.className = "theme_dark";
+  } else {
+    body.className = "theme_light";
+  }
 });
