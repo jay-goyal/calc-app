@@ -22,12 +22,12 @@
 #text {
   background: hsl(224, 36%, 15%);
   margin: auto;
-  padding: 0.3rem 1rem;
-  height: 4rem;
-  line-height: 4rem;
+  padding: 0.2rem 1rem;
+  height: 3rem;
+  line-height: 3rem;
   text-align: right;
   color: rgb(255, 255, 255);
-  font-size: 2rem;
+  font-size: 1rem;
   width: 15.78rem;
   margin-bottom: 1rem;
   border-radius: 8px;
