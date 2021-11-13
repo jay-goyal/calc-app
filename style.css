@@ -57,6 +57,12 @@
   box-shadow: 0px 8px hsl(28, 16%, 65%);
   color: hsl(221, 14%, 31%);
   cursor: pointer;
+  transition: 0.1s ease-in;
+}
+
+.btn:active {
+  height: 1.9rem;
+  box-shadow: none;
 }
 
 .btn_blue {
