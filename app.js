@@ -35,7 +35,7 @@ var checkbox = document.querySelector('input[type="checkbox"]');
 var toggle = document.getElementById("switch");
 var body = document.querySelector("body");
 
-if (localStorage.getItem("theme") === null) {
+if (!(localStorage.getItem("theme") === null)) {
   checkbox.checked = localStorage.getItem("theme");
 }
 
