@@ -5,9 +5,9 @@ A calculator website.
 *** Made for the Github Hackathon
 
 ** Code Warning
-   This is my first attempt at making a website with HTML, CSS and JS.
+   This is my first attempt at making a website with HTML, CSS and JS.\\
    The code should by no means be taken as the best way to do things.
 
 ** Reference
-   Design: [[https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29][Frontend Mentor]]
+   Design: [[https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29][Frontend Mentor]]\\
    Code: My Brain with Google's help for the toggle
