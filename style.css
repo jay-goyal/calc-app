@@ -178,13 +178,13 @@ input:checked + #slider:before {
   #text_title {
     width: 11rem;
     margin: auto;
-    margin-top: 3rem;
+    margin-top: 25%;
     grid-template-columns: 1.5fr 1fr;
   }
 
   #text {
     width: 11rem;
-	margin-bottom: 0.3rem;
+    margin-bottom: 0.3rem;
   }
 
   #btn_parent {
@@ -202,10 +202,10 @@ input:checked + #slider:before {
   }
 
   .btn_blue {
-	  box-shadow: 0px 4px var(--btn-blue-shadow);
+    box-shadow: 0px 4px var(--btn-blue-shadow);
   }
 
   .btn_red {
-	  box-shadow: 0px 4px var(--btn-red-shadow);
+    box-shadow: 0px 4px var(--btn-red-shadow);
   }
 }
