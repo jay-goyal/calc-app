@@ -178,7 +178,6 @@ input:checked + #slider:before {
   #text_title {
     width: 11rem;
     margin: auto;
-    margin-top: 10%;
     grid-template-columns: 1.5fr 1fr;
   }
 

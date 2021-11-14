@@ -3,12 +3,14 @@ let div = document.getElementById("text");
 let value = div.innerHTML;
 
 var buttons_gen = document.querySelectorAll(".btn_gen");
+var btns_gen_list = [];
 var i = 0;
 for (i; i < buttons_gen.length; i++) {
   buttons_gen[i].addEventListener("click", function () {
     value += this.innerHTML;
     div.innerHTML = value;
   });
+  btns_gen_list.push(buttons_gen[i].innerHTML);
 }
 
 var btn_del = document.getElementById("btn_del");
@@ -28,6 +30,24 @@ btn_eq.addEventListener("click", function () {
   value = value.replace("x", "*");
   value = eval(value);
   div.innerHTML = value;
+});
+
+window.addEventListener("keydown", function (event) {
+  event.preventDefault();
+  if (btns_gen_list.includes(event.key)) {
+    value += event.key;
+    div.innerHTML = value;
+  } else if (event.key == "*") {
+    value += "x";
+    div.innerHTML = value;
+  } else if (event.key == "Backspace" || event.key == "Delete") {
+    value = value.slice(0, -1);
+    div.innerHTML = value;
+  } else if (event.key == "=" || event.key == "Enter") {
+    value = value.replace("x", "*");
+    value = eval(value);
+    div.innerHTML = value;
+  }
 });
 
 // THEME
