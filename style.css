@@ -117,7 +117,7 @@ input:checked + #slider:before {
 }
 
 .theme_light #text {
-	color: var(--text-btn-norm);
+  color: var(--text-btn-norm);
 }
 
 /* KEYPAD */
@@ -170,4 +170,42 @@ input:checked + #slider:before {
 /* Big Buttons */
 .btn_big {
   grid-column: span 2;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 812px) {
+  #text_title {
+    width: 11rem;
+    margin: auto;
+    margin-top: 3rem;
+    grid-template-columns: 1.5fr 1fr;
+  }
+
+  #text {
+    width: 11rem;
+	margin-bottom: 0.3rem;
+  }
+
+  #btn_parent {
+    grid-auto-columns: minmax(1rem, min-content);
+    grid-auto-rows: minmax(1.5rem, min-content);
+    height: auto;
+    width: 11rem;
+    grid-gap: 0.4rem;
+    padding: 0.75rem;
+  }
+
+  .btn {
+    box-shadow: 0px 4px var(--btn-norm-shadow);
+    font-size: 0.9rem;
+  }
+
+  .btn_blue {
+	  box-shadow: 0px 4px var(--btn-blue-shadow);
+  }
+
+  .btn_red {
+	  box-shadow: 0px 4px var(--btn-red-shadow);
+  }
 }
