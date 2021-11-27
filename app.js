@@ -33,17 +33,20 @@ btn_eq.addEventListener("click", function () {
 });
 
 window.addEventListener("keydown", function (event) {
-  event.preventDefault();
   if (btns_gen_list.includes(event.key)) {
+    event.preventDefault();
     value += event.key;
     div.innerHTML = value;
   } else if (event.key == "*") {
+    event.preventDefault();
     value += "x";
     div.innerHTML = value;
   } else if (event.key == "Backspace" || event.key == "Delete") {
+    event.preventDefault();
     value = value.slice(0, -1);
     div.innerHTML = value;
   } else if (event.key == "=" || event.key == "Enter") {
+    event.preventDefault();
     value = value.replace("x", "*");
     value = eval(value);
     div.innerHTML = value;
